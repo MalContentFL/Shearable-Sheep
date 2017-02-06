@@ -33,7 +33,7 @@ public class ModBlocks
 	
 	public static void registerBlock(Block block)
 	{
-		block.setCreativeTab(ABetterBeaconMod.mod);
+		block.setCreativeTab(ShearableSheep.MOD_TAB);
 		GameRegistry.register(block);
 		GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
 		Utils.getLogger().info("Registered block " + block.getUnlocalizedName().substring(5));

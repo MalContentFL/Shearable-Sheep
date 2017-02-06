@@ -5,17 +5,20 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TabSSHEEP extends CreativeTabs
 {
 	public TabSSHEEP(String label)
 	{
-		super("mod");
+		super(label); // put 'itemGroup.label' in your lang file for standard translated tab label
 	}
 
 	@Override
-	public Item getTabIconItem()
+	@SideOnly(Side.CLIENT)
+	public ItemStack getTabIconItem()
 	{
-		return Item.getItemFromBlock(Blocks.WOOL);
+		return new ItemStack(Item.getItemFromBlock(Blocks.WOOL), 0, 0);
 	}
 }

@@ -75,13 +75,40 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
     {
         return (float[])DYE_TO_RGB.get(dyeColor);
     }
-
+    
+    /*
+     * breedability: The chance of a baby with the wanted wool to spawn
+     * drive: The minimum amount of time between being in love. Since the value (600) is private and final in EntityAnimal
+     * I cannot change it. Maybe in the future I will be able to.
+     * appetite: The minimum and maximum of the amount of blocks a sheep must be fed for it to be in love
+     * mutationChance: The chance the offspring will mutate into a different wool. Which wool is determined by xx
+     * bounty: The minimum (index 0) and maximum (index 1)
+     */
+    private double breedability = 0.5, mutationChance = 0.01;
+    private int[] bounty = new int[]{1,3}, appetite = new int[]{1,1};
+    private int drive = 600; //Unused currently. Left in in case of future changes
+    private Block woolBlock = null;
+    
     public EntityShearableSheep(World worldIn)
     {
         super(worldIn);
         this.setSize(0.9F, 1.3F);
         this.inventoryCrafting.setInventorySlotContents(0, new ItemStack(Items.DYE));
         this.inventoryCrafting.setInventorySlotContents(1, new ItemStack(Items.DYE));
+    }
+    
+    public EntityShearableSheep(World worldIn, double breedability, int[] bounty, int[] appetite, double mutationChance, int drive)
+    {
+        super(worldIn);
+        this.setSize(0.9F, 1.3F);
+        this.inventoryCrafting.setInventorySlotContents(0, new ItemStack(Items.DYE));
+        this.inventoryCrafting.setInventorySlotContents(1, new ItemStack(Items.DYE));
+        
+        this.breedability = breedability;
+        this.bounty = bounty;
+        this.appetite = appetite;
+        this.mutationChance = mutationChance;
+        this.drive = drive;
     }
 
     protected void initEntityAI()
@@ -196,25 +223,7 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
     {
         ItemStack itemstack = player.getHeldItem(hand);
 
-        if (false && itemstack.getItem() == Items.SHEARS && !this.getSheared() && !this.isChild())   //Forge: Moved to onSheared
-        {
-            if (!this.worldObj.isRemote)
-            {
-                this.setSheared(true);
-                int i = 1 + this.rand.nextInt(3);
-
-                for (int j = 0; j < i; ++j)
-                {
-                    EntityItem entityitem = this.entityDropItem(new ItemStack(Item.getItemFromBlock(Blocks.WOOL), 1, this.getFleeceColor().getMetadata()), 1.0F);
-                    entityitem.motionY += (double)(this.rand.nextFloat() * 0.05F);
-                    entityitem.motionX += (double)((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
-                    entityitem.motionZ += (double)((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
-                }
-            }
-
-            itemstack.damageItem(1, player);
-            this.playSound(SoundEvents.ENTITY_SHEEP_SHEAR, 1.0F, 1.0F);
-        }
+        //Wool Drops moved to on sheared
 
         return super.processInteract(player, hand);
     }
@@ -423,7 +432,7 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
     public java.util.List<ItemStack> onSheared(ItemStack item, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune)
     {
         this.setSheared(true);
-        int i = 1 + this.rand.nextInt(3);
+        int i = bounty[0] + this.rand.nextInt(bounty[1]);
 
         java.util.List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
         for (int j = 0; j < i; ++j)
@@ -431,5 +440,35 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
 
         this.playSound(SoundEvents.ENTITY_SHEEP_SHEAR, 1.0F, 1.0F);
         return ret;
+    }
+    
+    public double getBreedability()
+    {
+    	return breedability;
+    }
+    
+    public double getMutationChance()
+    {
+    	return mutationChance;
+    }
+    
+    public int[] getBounty()
+    {
+    	return bounty;
+    }
+    
+    public int[] getAppetite()
+    {
+    	return appetite;
+    }
+    
+    public int getDrive()
+    {
+    	return drive;
+    }
+    
+    public Block getWoolBlock()
+    {
+    	return woolBlock;
     }
 }

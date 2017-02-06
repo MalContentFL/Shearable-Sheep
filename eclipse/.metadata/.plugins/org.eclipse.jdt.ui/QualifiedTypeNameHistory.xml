@@ -11,6 +11,15 @@
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderManager"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.layers.LayerRenderer"/>
 <fullyQualifiedTypeName name="malcontentfl.shearablesheep.renderers.entity.RenderShearableSheep"/>
-<fullyQualifiedTypeName name="malcontentfl.shearablesheep.entities.EntityShearableSheep"/>
 <fullyQualifiedTypeName name="malcontentfl.shearablesheep.renderers.entity.layers.LayerShearableSheepWool"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.SideOnly"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.creativeTabs.TabSSHEEP"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.init.ModItems"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.init.ModBlocks"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.SidedProxy"/>
+<fullyQualifiedTypeName name="malcontentfl.abetterbeaconmod.proxy.CommonProxy"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.entities.EntityShearableSheep"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 </qualifiedTypeNameHistroy>
