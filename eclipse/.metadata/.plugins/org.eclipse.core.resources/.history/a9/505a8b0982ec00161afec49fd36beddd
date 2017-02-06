@@ -1,0 +1,5 @@
+package malcontentfl.shearablesheep.renderers.entity.layers;
+
+public class LayerShearableSheepWool {
+
+}

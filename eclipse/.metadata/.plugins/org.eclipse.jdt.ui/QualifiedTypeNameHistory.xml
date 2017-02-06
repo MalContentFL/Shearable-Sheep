@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.event.FMLPreInitializationEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.event.FMLPostInitializationEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.passive.EntityAnimal"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.EntityRegistry"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderLiving"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderManager"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.layers.LayerRenderer"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.renderers.entity.RenderShearableSheep"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.entities.EntityShearableSheep"/>
+<fullyQualifiedTypeName name="malcontentfl.shearablesheep.renderers.entity.layers.LayerShearableSheepWool"/>
+</qualifiedTypeNameHistroy>
