@@ -1,9 +1,0 @@
-package malcontentfl.shearablesheep.renderers.entity;
-
-public class OffspringLogic
-{
-	public OffspringLogic()
-	{
-		
-	}
-}

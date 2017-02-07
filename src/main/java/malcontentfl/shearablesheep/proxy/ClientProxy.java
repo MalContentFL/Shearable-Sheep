@@ -1,7 +1,7 @@
-package malcontentfl.abetterbeaconmod.proxy;
+package malcontentfl.shearablesheep.proxy;
 
-import malcontentfl.abetterbeaconmod.init.ModBlocks;
-import malcontentfl.abetterbeaconmod.init.ModItems;
+import malcontentfl.shearablesheep.init.ModBlocks;
+import malcontentfl.shearablesheep.init.ModItems;
 
 public class ClientProxy extends CommonProxy
 {

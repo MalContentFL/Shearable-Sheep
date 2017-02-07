@@ -1,6 +1,6 @@
-package malcontentfl.abetterbeaconmod.gui;
+package malcontentfl.shearablesheep.gui;
 
-import malcontentfl.abetterbeaconmod.init.ModItems;
+import malcontentfl.shearablesheep.init.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;

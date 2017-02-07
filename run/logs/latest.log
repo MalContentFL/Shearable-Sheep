@@ -1,0 +1,71 @@
+[22:49:22] [Client thread/INFO]: Setting user: Player597
+[22:49:25] [Client thread/INFO]: LWJGL Version: 2.9.4
+[22:49:28] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Witherlands
+[22:49:31] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:49:31] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[22:49:31] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:49:32] [Thread-7/INFO]: OpenAL initialized.
+[22:49:32] [Sound Library Loader/INFO]: Sound engine started
+[22:49:35] [Client thread/INFO]: Created: 16x16 textures-atlas
+[22:49:36] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Witherlands
+[22:49:38] [Client thread/INFO]: SoundSystem shutting down...
+[22:49:38] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[22:49:38] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:49:38] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[22:49:38] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:49:38] [Thread-9/INFO]: OpenAL initialized.
+[22:49:38] [Sound Library Loader/INFO]: Sound engine started
+[22:49:41] [Client thread/INFO]: Created: 512x512 textures-atlas
+[22:49:49] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[22:49:49] [Server thread/INFO]: Generating keypair
+[22:49:50] [Server thread/INFO]: Preparing start region for level 0
+[22:49:51] [Server thread/INFO]: Preparing spawn area: 13%
+[22:49:52] [Server thread/INFO]: Preparing spawn area: 33%
+[22:49:53] [Server thread/INFO]: Preparing spawn area: 54%
+[22:49:53] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[22:49:54] [Server thread/INFO]: Preparing spawn area: 76%
+[22:49:55] [Server thread/INFO]: Preparing spawn area: 92%
+[22:49:55] [Server thread/INFO]: Changing view distance to 12, from 10
+[22:49:56] [Server thread/INFO]: Player597[local:E:c34ccf01] logged in with entity id 651 at (168.5, 48.0, 235.5)
+[22:49:56] [Server thread/INFO]: Player597 joined the game
+[22:49:57] [Server thread/INFO]: Saving and pausing game...
+[22:49:58] [Server thread/INFO]: Saving chunks for level 'test'/Overworld
+[22:49:58] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@532b3318[id=618c707a-83d7-31ad-b075-bd98e2c75926,name=Player597,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:59) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:56) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827) [guava-17.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:165) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3060) [Minecraft.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:131) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_121]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_121]
+[22:49:58] [Server thread/INFO]: Saving chunks for level 'test'/Nether
+[22:49:58] [Server thread/INFO]: Saving chunks for level 'test'/The End
+[22:50:02] [Server thread/INFO]: Player597 has just earned the achievement [Taking Inventory]
+[22:50:02] [Client thread/INFO]: [CHAT] Player597 has just earned the achievement [Taking Inventory]
+[22:50:16] [Server thread/INFO]: Saving and pausing game...
+[22:50:16] [Server thread/INFO]: Saving chunks for level 'test'/Overworld
+[22:50:16] [Server thread/INFO]: Saving chunks for level 'test'/Nether
+[22:50:16] [Server thread/INFO]: Saving chunks for level 'test'/The End
+[22:50:16] [Server thread/INFO]: Stopping server
+[22:50:16] [Server thread/INFO]: Saving players
+[22:50:16] [Server thread/INFO]: Saving worlds
+[22:50:16] [Server thread/INFO]: Saving chunks for level 'test'/Overworld
+[22:50:16] [Server thread/INFO]: Saving chunks for level 'test'/Nether
+[22:50:16] [Server thread/INFO]: Saving chunks for level 'test'/The End
+[22:50:18] [Client thread/INFO]: Stopping!
+[22:50:18] [Client thread/INFO]: SoundSystem shutting down...
+[22:50:18] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

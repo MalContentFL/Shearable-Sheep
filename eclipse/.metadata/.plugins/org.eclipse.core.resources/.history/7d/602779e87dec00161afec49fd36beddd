@@ -1,8 +1,0 @@
-package malcontentfl.shearablesheep.entities;
-
-public class Snippet {
-	public static void main(String[] args) {
-		EntitySheep.class
-	}
-}
-

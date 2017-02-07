@@ -1,4 +1,4 @@
-package malcontentfl.abetterbeaconmod.proxy;
+package malcontentfl.shearablesheep.proxy;
 
 public class CommonProxy
 {	

@@ -4,7 +4,6 @@ import malcontentfl.shearablesheep.ShearableSheep;
 import malcontentfl.shearablesheep.Reference;
 import malcontentfl.shearablesheep.Utils;
 import malcontentfl.shearablesheep.entities.EntityShearableSheep;
-import malcontentfl.shearablesheep.items.ItemSolidifiedEnergy;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -19,25 +18,23 @@ public class ModEntities
 	
 	public static void init()
 	{
-		shearableSheep = new EntityShearableSheep("shearable_sheep", "shearable_sheep");
+		//shearableSheep = new EntityShearableSheep("shearable_sheep", "shearable_sheep");
 	}
 	
 	public static void register()
 	{
-		EntityRegistry.registerModEntity(shearableSheep, "Shearable Sheep", 101, ShearableSheep.instance, 64, 1, true);
-        
+		//EntityRegistry.registerModEntity(shearableSheep, "Shearable Sheep", 101, ShearableSheep.instance, 64, 1, true);
 	}
 	
 	public static void registerRenders()
 	{
-		registerRender(shearableSheep);
+		//registerRender(shearableSheep);
 	}
 	
-	public static void registerItem(Item item)
+	public static void registerEntity(Entity entity)
 	{
-		item.setCreativeTab(ShearableSheep.mod);
-		GameRegistry.register(item);
-		Utils.getLogger().info("Registered item " + item.getUnlocalizedName().substring(5));
+		//GameRegistry.(entity);
+		//Utils.getLogger().info("Registered entity " + entity.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRender(Item item)

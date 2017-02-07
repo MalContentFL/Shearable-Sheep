@@ -18,7 +18,7 @@ public class RenderGuiHandler
 	@SubscribeEvent
 	public void onHoldEndowingRod(RenderGameOverlayEvent.Post event)
 	{
-		if ()/* player is holding endowing rod*/
+		if (true)/* player is holding endowing rod*/
 		new GuiHoldingEndowingRod(Minecraft.getMinecraft());
 	}
 }

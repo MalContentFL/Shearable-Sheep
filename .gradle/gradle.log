@@ -1,7 +1,7 @@
 This mapping 'snapshot_20161111' was designed for MC 1.10.2! Use at your own peril.This mapping 'snapshot_20161111' was designed for MC 1.10.2! Use at your own peril.
 
 #################################################
-         ForgeGradle 2.2-SNAPSHOT-cc55732        
+         ForgeGradle 2.2-SNAPSHOT-2112b0a        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -19,6 +19,7 @@ This mapping 'snapshot_20161111' was designed for MC 1.10.2! Use at your own per
 :extractUserdev UP-TO-DATE
 :getAssetIndex UP-TO-DATE
 :getAssets
+Current status: 1195/1196   99%
 :makeStart
 :makeEclipseCleanRunClient
 :makeEclipseCleanRunServer
@@ -26,4 +27,4 @@ This mapping 'snapshot_20161111' was designed for MC 1.10.2! Use at your own per
 
 BUILD SUCCESSFUL
 
-Total time: 9.749 secs
+Total time: 14.002 secs

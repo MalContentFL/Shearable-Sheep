@@ -3,7 +3,7 @@ package malcontentfl.shearablesheep.init;
 import malcontentfl.shearablesheep.ShearableSheep;
 import malcontentfl.shearablesheep.Reference;
 import malcontentfl.shearablesheep.Utils;
-import malcontentfl.shearablesheep.items.ItemSolidifiedEnergy;
+import malcontentfl.shearablesheep.items.ItemSheepalyzer;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -12,26 +12,22 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems 
 {
-	public static Item ironLens;
-	public static Item goldLens;
-	public static Item diamondLens;
-	public static Item emeraldLens;
-	public static Item endowingRod;
 	public static Item solidifiedEnergy;
+	public static Item sheepalyzer;
 	
 	public static void init()
 	{
-		solidifiedEnergy = new ItemSolidifiedEnergy("solidified_energy", "solidified_energy");
+		sheepalyzer = new ItemSheepalyzer("sheepalyzer", "sheepalyzer");
 	}
 	
 	public static void register()
 	{
-		registerItem(solidifiedEnergy);
+		registerItem(sheepalyzer);
 	}
 	
 	public static void registerRenders()
 	{
-		registerRender(solidifiedEnergy);
+		registerRender(sheepalyzer);
 	}
 	
 	public static void registerItem(Item item)

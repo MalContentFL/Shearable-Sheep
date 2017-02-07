@@ -1,11 +1,14 @@
 package malcontentfl.shearablesheep;
 
 import malcontentfl.shearablesheep.proxy.CommonProxy;
+import malcontentfl.shearablesheep.handlers.RecipeHandler;
+import malcontentfl.shearablesheep.handlers.RenderGuiHandler;
 import malcontentfl.shearablesheep.creativeTabs.TabSSHEEP;
 import malcontentfl.shearablesheep.init.ModBlocks;
 import malcontentfl.shearablesheep.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -37,12 +40,14 @@ public class ShearableSheep
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+    	//EventHandler.registerEvents();
+		RecipeHandler.registerCraftingRecipes();
+		RecipeHandler.registerFurnaceRecipes();
     }
     
     @EventHandler
     public void init(FMLPostInitializationEvent event)
     {
-
+    	MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
     }
 }

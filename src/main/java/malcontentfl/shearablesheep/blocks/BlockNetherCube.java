@@ -1,8 +1,8 @@
-package malcontentfl.abetterbeaconmod.blocks;
+package malcontentfl.shearablesheep.blocks;
 
 import java.util.Random;
 
-import malcontentfl.abetterbeaconmod.Reference;
+import malcontentfl.shearablesheep.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
