@@ -9,6 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -16,30 +17,11 @@ public class ModEntities
 {
 	public static Entity shearableSheep;
 	
-	public static void init()
-	{
-		//shearableSheep = new EntityShearableSheep("shearable_sheep", "shearable_sheep");
-	}
 	
-	public static void register()
+	public static void registerRender(Entity entity)
 	{
-		//EntityRegistry.registerModEntity(shearableSheep, "Shearable Sheep", 101, ShearableSheep.instance, 64, 1, true);
-	}
-	
-	public static void registerRenders()
-	{
-		//registerRender(shearableSheep);
-	}
-	
-	public static void registerEntity(Entity entity)
-	{
-		//GameRegistry.(entity);
-		//Utils.getLogger().info("Registered entity " + entity.getUnlocalizedName().substring(5));
-	}
-	
-	public static void registerRender(Item item)
-	{
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
-		Utils.getLogger().info("Register render for " + item.getUnlocalizedName().substring(5));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCobblestoneSheep.class, 
+			      new EntityCobblestoneSheep(new EntityCobblestoneSheep(), 0.5F));
+		Utils.getLogger().info("Register render for " + entity.getUnlocalizedName().substring(5));
 	}
 }
