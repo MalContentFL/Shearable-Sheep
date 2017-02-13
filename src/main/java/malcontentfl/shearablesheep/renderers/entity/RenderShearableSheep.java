@@ -15,11 +15,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class RenderShearableSheep extends RenderLiving<EntityShearableSheep>
 {
     private static final ResourceLocation SHEARED_SHEEP_TEXTURES = new ResourceLocation("textures/entity/sheep/sheep.png");
-
+    
+    private EntityShearableSheep relatedSheepEntity;
+    
     public RenderShearableSheep(RenderManager p_i47195_1_)
     {
         super(p_i47195_1_, new ModelSheep2(), 0.7F);
-        this.addLayer(new LayerShearableSheepWool(this));
+        this.addLayer(new LayerShearableSheepWool(this, new ResourceLocation(relatedSheepEntity.getWoolBlock().getUnlocalizedName())));
     }
 
     /**
@@ -28,5 +30,10 @@ public class RenderShearableSheep extends RenderLiving<EntityShearableSheep>
     protected ResourceLocation getEntityTexture(EntityShearableSheep entity)
     {
         return SHEARED_SHEEP_TEXTURES;
+    }
+    
+    public void setRelatedSheepEntity(EntityShearableSheep shearableSheep)
+    {
+    	relatedSheepEntity = shearableSheep;
     }
 }

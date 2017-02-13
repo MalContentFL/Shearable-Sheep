@@ -15,13 +15,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class LayerShearableSheepWool implements LayerRenderer<EntityShearableSheep>
 {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("textures/entity/sheep/sheep_fur.png");
+    private static ResourceLocation TEXTURE = new ResourceLocation("textures/entity/sheep/sheep_fur.png");
     private final RenderShearableSheep sheepRenderer;
     private final ModelSheep1 sheepModel = new ModelSheep1();
 
-    public LayerShearableSheepWool(RenderShearableSheep shearableSheepRendererIn)
+    public LayerShearableSheepWool(RenderShearableSheep shearableSheepRendererIn, ResourceLocation resourceLocation)
     {
         this.sheepRenderer = shearableSheepRendererIn;
+        setResourceLocation(resourceLocation);
+    }
+
+	public void setResourceLocation(ResourceLocation resourceLocation)
+    {
+    	TEXTURE = resourceLocation;
     }
 
     public void doRenderLayer(EntityShearableSheep entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale)

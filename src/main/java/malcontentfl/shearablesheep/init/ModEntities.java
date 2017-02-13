@@ -1,27 +1,33 @@
 package malcontentfl.shearablesheep.init;
 
 import malcontentfl.shearablesheep.ShearableSheep;
-import malcontentfl.shearablesheep.Reference;
-import malcontentfl.shearablesheep.Utils;
-import malcontentfl.shearablesheep.entities.EntityShearableSheep;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ModelLoader;
+import malcontentfl.shearablesheep.entities.EntityCobblestoneSheep;
+import malcontentfl.shearablesheep.renderers.entity.RenderShearableSheep;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.init.Biomes;
+import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ModEntities 
-{
-	public static Entity shearableSheep;
-	
-	
-	public static void registerRender(Entity entity)
-	{
-		RenderingRegistry.registerEntityRenderingHandler(EntityCobblestoneSheep.class, 
-			      new EntityCobblestoneSheep(new EntityCobblestoneSheep(), 0.5F));
-		Utils.getLogger().info("Register render for " + entity.getUnlocalizedName().substring(5));
-	}
+public class ModEntities {
+
+    public static void init() {
+        // Every entity in our mod has an ID (local to this mod)
+        int id = 1;
+        EntityRegistry.registerModEntity(EntityCobblestoneSheep.class, "CobblestoneSheep", id++, ShearableSheep.instance, 64, 3, true, 0x996600, 0x00ff00);
+
+        // We want our mob to spawn in Plains and ice plains biomes. If you don't add this then it will not spawn automatically
+        // but you can of course still make it spawn manually
+        EntityRegistry.addSpawn(EntityCobblestoneSheep.class, 100, 3, 5, EnumCreatureType.CREATURE, Biomes.PLAINS, Biomes.ICE_PLAINS);
+
+        // This is the loot table for our mob
+        LootTableList.register(EntityCobblestoneSheep.LOOT);
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static void initModels() {
+        RenderingRegistry.registerEntityRenderingHandler(EntityCobblestoneSheep.class, RenderShearableSheep.FACTORY);
+    }
 }

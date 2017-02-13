@@ -18,7 +18,6 @@ import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAITempt;
 import net.minecraft.entity.ai.EntityAIWanderAvoidWater;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -87,7 +86,7 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
     private double breedability = 0.5, mutationChance = 0.01;
     private int[] bounty = new int[]{1,3}, appetite = new int[]{1,1};
     private int drive = 600; //Unused currently. Left in in case of future changes
-    private Block woolBlock = null;
+    protected Block woolBlock = Blocks.WOOL;
     
     public EntityShearableSheep(World worldIn)
     {
@@ -97,7 +96,7 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
         this.inventoryCrafting.setInventorySlotContents(1, new ItemStack(Items.DYE));
     }
     
-    public EntityShearableSheep(World worldIn, double breedability, int[] bounty, int[] appetite, double mutationChance, int drive)
+    public EntityShearableSheep(World worldIn, double breedability, int[] bounty, int[] appetite, double mutationChance, int drive, Block block)
     {
         super(worldIn);
         this.setSize(0.9F, 1.3F);
@@ -109,6 +108,7 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
         this.appetite = appetite;
         this.mutationChance = mutationChance;
         this.drive = drive;
+        this.woolBlock = block;
     }
 
     protected void initEntityAI()
@@ -171,7 +171,8 @@ public class EntityShearableSheep extends EntityAnimal implements net.minecraftf
             {
                 case WHITE:
                 default:
-                    return LootTableList.ENTITIES_SHEEP_WHITE;
+                    //return LootTableList.ENTITIES_SHEEP_WHITE;
+                	LootTableList.register(new ResourceLocation(woolBlock.getUnlocalizedName()));
                 case ORANGE:
                     return LootTableList.ENTITIES_SHEEP_ORANGE;
                 case MAGENTA:

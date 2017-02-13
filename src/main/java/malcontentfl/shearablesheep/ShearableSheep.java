@@ -23,6 +23,9 @@ public class ShearableSheep
     public static final String MODID = "ssheep";
     public static final String VERSION = "0.0.0.1";
     
+    @Mod.Instance
+    public static ShearableSheep instance;
+    
 	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
