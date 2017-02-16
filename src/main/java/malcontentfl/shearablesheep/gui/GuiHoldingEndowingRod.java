@@ -1,3 +1,7 @@
+/*
+ * A leftover from a previous attempt at making a mod. FOR REFERENCE ONLY
+ */
+
 package malcontentfl.shearablesheep.gui;
 
 import malcontentfl.shearablesheep.init.ModItems;

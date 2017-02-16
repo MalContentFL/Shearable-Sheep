@@ -12,12 +12,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems 
 {
-	public static Item solidifiedEnergy;
 	public static Item sheepalyzer;
 	
 	public static void init()
 	{
-		sheepalyzer = new ItemSheepalyzer("sheepalyzer", "sheepalyzer");
+		sheepalyzer = new ItemSheepalyzer("sheepalyzer", ShearableSheep.tabMod, 1);
 	}
 	
 	public static void register()
@@ -32,7 +31,6 @@ public class ModItems
 	
 	public static void registerItem(Item item)
 	{
-		item.setCreativeTab(ShearableSheep.MOD_TAB);
 		GameRegistry.register(item);
 		Utils.getLogger().info("Registered item " + item.getUnlocalizedName().substring(5));
 	}

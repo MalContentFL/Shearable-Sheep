@@ -3,6 +3,8 @@ package malcontentfl.shearablesheep.blocks;
 import java.util.Random;
 
 import malcontentfl.shearablesheep.Reference;
+import malcontentfl.shearablesheep.creativeTabs.TabSSHEEP;
+import malcontentfl.shearablesheep.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -18,22 +20,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-public class BlockNetherCube extends Block
+public class BlockNetherCube extends ModBlock
 {
-	
-	public BlockNetherCube(String unlocalizedName, String registryName)
+	public BlockNetherCube(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool)
 	{
-		super(Material.GLASS);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setRegistryName(new ResourceLocation(Reference.MODID, registryName));
-		this.setHardness(8);
-		this.setResistance(20);
-		this.setLightLevel(0.9F);
+		super(mat, name, tab, hardness, resistance, harvest, tool);
 	}
 	
-	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return super.getItemDropped(state, rand, fortune);
+		return Item.getItemFromBlock(ModBlocks.netherCube);
 	}
 }

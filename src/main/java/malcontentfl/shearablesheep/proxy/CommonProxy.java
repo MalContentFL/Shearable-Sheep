@@ -1,8 +1,25 @@
 package malcontentfl.shearablesheep.proxy;
 
-public class CommonProxy
+import malcontentfl.shearablesheep.init.ModBlocks;
+import malcontentfl.shearablesheep.init.ModItems;
+
+public class CommonProxy implements IProxy
 {	
-	public void registerRenders()
+	public void preInit()
+	{
+		ModItems.init();
+		ModItems.register();
+		
+		ModBlocks.init();
+		ModBlocks.register();
+	}
+	
+	public void init()
+	{
+		
+	}
+	
+	public void postInit()
 	{
 		
 	}

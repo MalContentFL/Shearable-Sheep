@@ -1,6 +1,6 @@
 {
 	"variants":
 	{
-		"normal": { "model": "abbm:nether_cube" }
+		"normal": { "model": "ssheep:nether_cube" }
 	}
 }

@@ -1,5 +1,5 @@
 tile.nether_cube.name=Nether Cube
 
-item.sheepalyzer=Sheepalyzer
+item.sheepalyzer.name=Sheepalyzer
 
-itemGroup.mod=Shearable Sheep
+itemGroup.ssheep=Shearable Sheep

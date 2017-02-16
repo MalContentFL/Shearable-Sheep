@@ -1,9 +1,8 @@
-package malcontentfl.shearablesheep.renderers.entity;
+package malcontentfl.shearablesheep.entities;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import malcontentfl.shearablesheep.entities.EntityShearableSheep;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -20,7 +19,7 @@ public class OffspringLogic
 	{
 		if (father.getBreedability() < 0)
 		{
-			this.father = new EntityShearableSheep(father.getEntityWorld(), 0.00, father.getBounty(), father.getAppetite(), father.getMutationChance(), father.getDrive());
+			this.father = new EntityShearableSheep(father.getEntityWorld(), 0.00, father.getBounty(), father.getAppetite(), father.getMutationChance(), father.getDrive(), father.getWoolBlock());
 		}
 		else
 		{
@@ -29,7 +28,7 @@ public class OffspringLogic
 		
 		if (mother.getBreedability() < 0)
 		{
-			this.mother = new EntityShearableSheep(mother.getEntityWorld(), 0.00, mother.getBounty(), mother.getAppetite(), mother.getMutationChance(), mother.getDrive());
+			this.mother = new EntityShearableSheep(mother.getEntityWorld(), 0.00, mother.getBounty(), mother.getAppetite(), mother.getMutationChance(), mother.getDrive(), father.getWoolBlock());
 		}
 		else
 		{

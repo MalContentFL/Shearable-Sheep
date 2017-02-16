@@ -1,5 +1,5 @@
 {
-	"parent": "abbm:block/nether_cube",
+	"parent": "ssheep:block/nether_cube",
 	"display": {
 		"thirdperson": {
 			"rotation": [ 10, -45, 170 ],

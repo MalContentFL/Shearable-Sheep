@@ -12,7 +12,7 @@ This mapping 'snapshot_20161111' was designed for MC 1.10.2! Use at your own per
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
 :getVersionJson
-:extractUserdev
+:extractUserdev UP-TO-DATE
 :extractDependencyATs SKIPPED
 :extractMcpData SKIPPED
 :extractMcpMappings SKIPPED
@@ -24,15 +24,13 @@ This mapping 'snapshot_20161111' was designed for MC 1.10.2! Use at your own per
 :deobfMcSRG SKIPPED
 :decompileMc SKIPPED
 :fixMcSources SKIPPED
-:applySourcePatches SKIPPED
+:applySourcePatches
 :remapMcSources SKIPPED
 :recompileMc SKIPPED
 :extractNatives SKIPPED
-:getAssetIndex
+:getAssetIndex UP-TO-DATE
 :getAssets
-Current status: 359/1196   30%
-Current status: 665/1196   55%
-Current status: 1008/1196   84%
+Current status: 602/1196   50%
 :makeStart
 :setupDecompWorkspace
 :eclipseClasspath
@@ -44,4 +42,4 @@ Current status: 1008/1196   84%
 
 BUILD SUCCESSFUL
 
-Total time: 57.185 secs
+Total time: 27.354 secs

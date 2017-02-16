@@ -43,7 +43,7 @@ public class GradleStart extends GradleStartCommon
     {
         argMap.put("version",        "1.11");
         argMap.put("assetIndex",     "1.11");
-        argMap.put("assetsDir",      "C:/Users/quint/.gradle/caches/minecraft/assets");
+        argMap.put("assetsDir",      "C:/Users/Quintin/.gradle/caches/minecraft/assets");
         argMap.put("accessToken",    "FML");
         argMap.put("userProperties", "{}");
         argMap.put("username",        null);
@@ -68,7 +68,7 @@ public class GradleStart extends GradleStartCommon
     private static void hackNatives()
     {
         String paths = System.getProperty("java.library.path");
-        String nativesDir = "C:/Users/quint/.gradle/caches/minecraft/net/minecraft/natives/1.11";
+        String nativesDir = "C:/Users/Quintin/.gradle/caches/minecraft/net/minecraft/natives/1.11";
         
         if (Strings.isNullOrEmpty(paths))
             paths = nativesDir;

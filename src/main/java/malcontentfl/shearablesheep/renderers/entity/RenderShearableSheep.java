@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.layers.LayerSheepWool;
 import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -16,12 +17,9 @@ public class RenderShearableSheep extends RenderLiving<EntityShearableSheep>
 {
     private static final ResourceLocation SHEARED_SHEEP_TEXTURES = new ResourceLocation("textures/entity/sheep/sheep.png");
     
-    private EntityShearableSheep relatedSheepEntity;
-    
     public RenderShearableSheep(RenderManager p_i47195_1_)
     {
         super(p_i47195_1_, new ModelSheep2(), 0.7F);
-        this.addLayer(new LayerShearableSheepWool(this, new ResourceLocation(relatedSheepEntity.getWoolBlock().getUnlocalizedName())));
     }
 
     /**
@@ -32,8 +30,8 @@ public class RenderShearableSheep extends RenderLiving<EntityShearableSheep>
         return SHEARED_SHEEP_TEXTURES;
     }
     
-    public void setRelatedSheepEntity(EntityShearableSheep shearableSheep)
+    public void addWoolLayer(RenderShearableSheep renderSheep, String resourcePath)
     {
-    	relatedSheepEntity = shearableSheep;
+    	super.addLayer(new LayerShearableSheepWool(renderSheep, new ResourceLocation(resourcePath)));
     }
 }

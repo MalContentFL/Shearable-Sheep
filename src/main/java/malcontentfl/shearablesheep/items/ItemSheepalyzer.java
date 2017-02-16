@@ -1,15 +1,11 @@
 package malcontentfl.shearablesheep.items;
 
-import malcontentfl.shearablesheep.Reference;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 
-public class ItemSheepalyzer extends Item
+public class ItemSheepalyzer extends ModItem
 {
-	
-	public ItemSheepalyzer(String unlocalizedName, String registryName)
+	public ItemSheepalyzer(String name, CreativeTabs tab, int stackSize)
 	{
-		this.setUnlocalizedName(unlocalizedName);
-		this.setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+		super(name, tab, stackSize);
 	}
 }

@@ -1,13 +1,9 @@
 package malcontentfl.shearablesheep;
 
-import malcontentfl.shearablesheep.proxy.CommonProxy;
+import malcontentfl.shearablesheep.proxy.IProxy;
 import malcontentfl.shearablesheep.handlers.RecipeHandler;
 import malcontentfl.shearablesheep.handlers.RenderGuiHandler;
 import malcontentfl.shearablesheep.creativeTabs.TabSSHEEP;
-import malcontentfl.shearablesheep.init.ModBlocks;
-import malcontentfl.shearablesheep.init.ModItems;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -16,41 +12,37 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = ShearableSheep.MODID, version = ShearableSheep.VERSION)
+@Mod(modid = Reference.MODID, version = Reference.VERSION, name = Reference.NAME)
 public class ShearableSheep
 {
-	public static final CreativeTabs MOD_TAB = new TabSSHEEP("Shearable Sheep");
-    public static final String MODID = "ssheep";
-    public static final String VERSION = "0.0.0.1";
+	public static TabSSHEEP tabMod = new TabSSHEEP();
+	
+	@SidedProxy(clientSide=Reference.CLIENT_PROXY, serverSide=Reference.SERVER_PROXY)
+
+	public static IProxy proxy;
     
     @Mod.Instance
     public static ShearableSheep instance;
-    
-	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
-	public static CommonProxy proxy;
 	
     @EventHandler
-    public void init(FMLPreInitializationEvent event)
+    public void preInit(FMLPreInitializationEvent event)
     {
-    	ModItems.init();
-		ModBlocks.init();
-		ModItems.register();
-		ModBlocks.register();
-		
-		proxy.registerRenders();
+    	proxy.preInit();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+    	proxy.init();
     	//EventHandler.registerEvents();
 		RecipeHandler.registerCraftingRecipes();
 		RecipeHandler.registerFurnaceRecipes();
     }
     
     @EventHandler
-    public void init(FMLPostInitializationEvent event)
+    public void postInit(FMLPostInitializationEvent event)
     {
+    	proxy.postInit();
     	MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
     }
 }
